@@ -1,0 +1,46 @@
+@import "settings";
+
+@font-face {
+    font-family: 'Philosopher';
+    src: url("/assets/fonts/Philosopher-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    src: url("/assets/fonts/Philosopher-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    src: url("/assets/fonts/Philosopher-Italic.ttf");
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    src: url("/assets/fonts/Philosopher-BoldItalic.ttf");
+    font-style: italic;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Righteous';
+    src: url("/assets/fonts/Righteous-Regular.ttf");
+    font-weight: normal;
+}
+
+
+body {
+    font-family: "Philosopher", serif;
+    font-size: $font-size-default;
+    color: $color-text-main;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

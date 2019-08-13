@@ -1,3 +1,123 @@
-body {
-    background: red;
+@import "settings";
+
+header {
+    background: $bg-header;
+    font-family: "Righteous", sans-serif;
+    text-transform: uppercase;
+    color: white;
+
+    a {
+        color: inherit;
+
+        &:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    .logo {
+        margin-top: 10px;
+
+        h1 {
+            font-size: 22px;
+        }
+
+        span {
+            margin-left: 10px;
+        }
+    }
+}
+
+nav.nav {
+    font-size: 12px;
+
+    a {
+        display: block;
+    }
+
+    ul.nav-level-1 {
+        display: flex;
+        justify-content: flex-end;
+
+        & > li {
+            position: relative;
+            box-shadow: 5px 0 6px rgba(0,0,0,.2);
+            padding: 22px;
+            transition: background-color .2s ease;
+
+            &:hover {
+                background-color: $bg-header-links-hover;
+                cursor: pointer;
+                box-shadow: 0 0 6px rgba(0,0,0,.2);
+            }
+        }
+
+        & > li:hover .menu {
+            visibility: visible;
+            opacity: 1;
+        }
+
+    }
+
+    .nav-link img {
+        width: 25px;
+        height: 25px;
+        opacity: .3;
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    color: $color-text-main;
+    transition: opacity .5s ease, .5s visibility .0s ease;
+    box-shadow: 0 0 16px rgba(0,0,0,.2);
+
+    li &-item {
+        margin: 0 10px;
+        @include flexStartCenter();
+        border-bottom: 1px solid $color-border-default;
+        min-width: 127px;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &::before {
+            @include pseudoCircle(20px);
+            background-size: 10px 10px;
+            fill: white;
+
+        }
+
+        a {
+            padding: 12px 0;
+            font-size: 10px;
+            text-align: center;
+            flex: 1;
+        }
+
+        &-5::before {
+            background-color: #3c5a98;
+            background-image: url("/assets/icons/facebook-logo.svg");
+        }
+
+        &-6::before {
+            background-color: #00aced;
+            background-image: url("/assets/icons/twitter-logo-silhouette.svg");
+
+        }
+
+        &-7::before {
+            background-color: #d14836;
+        }
+
+        &-8::before {
+            background-color: #cb2027;
+        }
+    }
+
 }
