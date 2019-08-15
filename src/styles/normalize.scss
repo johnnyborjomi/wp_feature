@@ -44,3 +44,15 @@ ul, li {
     padding: 0;
     list-style: none;
 }
+
+main {
+    margin-bottom: 50px;
+}
+
+button {
+    background: none;
+    -webkit-appearance: none;
+    &:focus {
+        outline: none;
+    }
+}

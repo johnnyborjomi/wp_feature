@@ -6,7 +6,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
 
 import './styles/normalize.scss';
 import './styles/header.scss';
+import './styles/post.scss';
 
-
-import './post-ajax-getter';
+import './components/masonry-grid';
+import './components/post-ajax-getter';
 

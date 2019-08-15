@@ -5,6 +5,8 @@ header {
     font-family: "Righteous", sans-serif;
     text-transform: uppercase;
     color: white;
+    position: relative;
+    z-index: 100;
 
     a {
         color: inherit;
@@ -68,6 +70,7 @@ nav.nav {
 
 .menu {
     position: absolute;
+    background: white;
     top: 100%;
     right: 0;
     visibility: hidden;
