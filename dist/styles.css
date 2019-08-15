@@ -3229,8 +3229,45 @@ nav.nav {
   .post h2, .post p {
     padding: 0 20px; }
   .post-thumbnail {
+    display: block;
     min-height: 300px;
-    background-color: gray; }
+    background-color: gray;
+    position: relative; }
+    .post-thumbnail::before {
+      visibility: hidden;
+      opacity: 0;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(36, 36, 36, 0.3);
+      text-align: center;
+      transition: opacity 0.5s ease, 0.5s visibility 0s ease; }
+    .post-thumbnail::after {
+      visibility: hidden;
+      opacity: 0;
+      content: 'Read More';
+      font-family: Righteous, sans-serif;
+      text-transform: uppercase;
+      width: 175px;
+      height: 52px;
+      line-height: 46px;
+      text-align: center;
+      border-style: solid;
+      border-width: 3px;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      border-color: #41e9ff;
+      color: #41e9ff;
+      transition: opacity 0.5s ease, 0.5s visibility 0s ease; }
+    .post-thumbnail:hover::before, .post-thumbnail:hover::after {
+      visibility: visible;
+      opacity: 1; }
   .post::after {
     content: '';
     display: block;

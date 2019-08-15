@@ -34,7 +34,7 @@ function true_load_posts(){
 //              echo '<a href="' . get_permalink( $recent_post_single ) . '">' . the_post_thumbnail() . '</a>';
             echo
                 '<div class="post col-xs-12 col-sm-6 col-md-4">'.
-                '<div class="post-thumbnail"></div>'.
+                '<a href="#" class="post-thumbnail"><img src="" alt=""></a>'.
                 '<span>'. $recent_post_single->post_date .'</span>'.
                 '<h2>' . $recent_post_single->post_title . '</h2>'.
                 '<p>'. $recent_post_single->post_content .'</p>'.
